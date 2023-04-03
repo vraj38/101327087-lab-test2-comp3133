@@ -1,0 +1,15 @@
+<div class="mainHolder">
+    <div *ngFor="let mission of missions" >
+        <mat-card class="list"  >
+            <img mat-card-sm-image class="img1" src="{{ mission.links.mission_patch_small }}" alt="SpaceXLogo"/>
+            <mat-card-title-group>
+                <mat-card-title class="list-item">{{ mission.mission_name }}</mat-card-title>
+                <mat-card-subtitle class="list-item">{{ mission.launch_year }}</mat-card-subtitle>
+            </mat-card-title-group>
+            <mat-card-content class="list-detail">{{ mission.details }}</mat-card-content>
+            <mat-card-actions class="list-button">
+                <a mat-raised-button color="primary" routerLink="/{{ mission.flight_number }}">Details</a>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
